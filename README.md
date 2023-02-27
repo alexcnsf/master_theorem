@@ -82,29 +82,29 @@ The purpose of this lab is to both get you familiar with using these non-github 
 
         |                | `binary_search`           | `trinary_search`      |
         | -------------- | ------------------------- | --------------------- | 
-        | `n=2**0`       |                           |                       |
-        | `n=2**1`       |                           |                       |
-        | `n=2**2`       |                           |                       |
-        | `n=2**3`       |                           |                       |
-        | `n=2**4`       |                           |                       |
-        | `n=2**5`       |                           |                       |
-        | `n=2**6`       |                           |                       |
-        | `n=2**7`       |                           |                       |
-        | `n=2**8`       |                           |                       |
-        | `n=2**9`       |                           |                       |
-        | `n=2**10`      |                           |                       |
-        | `n=2**11`      |                           |                       |
-        | `n=2**12`      |                           |                       |
-        | `n=2**13`      |                           |                       |
-        | `n=2**14`      |                           |                       |
-        | `n=2**15`      |                           |                       |
-        | `n=2**16`      |                           |                       |
-        | `n=2**17`      |                           |                       |
-        | `n=2**18`      |                           |                       |
-        | `n=2**19`      |                           |                       |
-        | `n=2**20`      |                           |                       |
-        | `n=2**21`      |                           |                       |
-        | `n=2**22`      |                           |                       |
+        | `n=2**0`       |      0.748 usec           |   1.81 usec           |
+        | `n=2**1`       |      1.41 usec            |   3.37 usec           |
+        | `n=2**2`       |      1.97 usec            |   3.36 usec           |
+        | `n=2**3`       |      2.4 usec             |   3.48 usec           |
+        | `n=2**4`       |      2.88 usec            |   0.604 usec          |
+        | `n=2**5`       |      3.24 usec            |   3.2 usec            |
+        | `n=2**6`       |      3.69 usec            |   6.44 usec           |
+        | `n=2**7`       |      4.33 usec            |   5.96 usec           |
+        | `n=2**8`       |      5 usec               |   7.53 usec           |
+        | `n=2**9`       |      6.18 usec            |   4.77 usec           |
+        | `n=2**10`      |      6.51 usec            |   7.62 usec           |
+        | `n=2**11`      |      6.8 usec             |   9.58 usec           |
+        | `n=2**12`      |      7.12 usec            |   10.8 usec           |
+        | `n=2**13`      |      7.87 usec            |   11.2 usec           |
+        | `n=2**14`      |      8.56 usec            |   14.4 usec           |
+        | `n=2**15`      |      8.91 usec            |   14 usec             |
+        | `n=2**16`      |      9.42 usec            |   15.7 usec           |
+        | `n=2**17`      |      10.4 usec            |   14.3 usec           |
+        | `n=2**18`      |      10.7 usec            |   16.2 usec           |
+        | `n=2**19`      |      11.3 usec            |   13.4 usec           |
+        | `n=2**20`      |      11.1 usec            |   18.9 usec           |
+        | `n=2**21`      |      11.7 usec            |   18.2 usec           |
+        | `n=2**22`      |      11.9 usec            |   19.1 usec           |
 
 
 1. Use the master theorem to solve the following recurrence relations,
@@ -113,17 +113,17 @@ The purpose of this lab is to both get you familiar with using these non-github 
 
     | recurrence           | solution                       | practical application                     |
     | -------------------- | ------------------------------ | ----------------------------------------- |
-    | T(n) = T(n/2) + n    | $\Theta(                    )$ | runtime of the bad binary search          |
-    | T(n) = T(n/2) + 1    | $\Theta(                    )$ | runtime of the correct binary search      |
-    | T(n) = T(n/3) + 1    | $\Theta(                    )$ | runtime of "trinary search"               |
-    | T(n) = 2T(n/2) + 1   | $\Theta(                    )$ | runtime for [finding the median of an unsorted list](https://en.wikipedia.org/wiki/Quickselect) |
-    | T(n) = 2T(n/2) + n   | $\Theta(                    )$ | runtime of merge sort                     |
-    | T(n) = 3T(n/3) + n   | $\Theta(                    )$ | runtime of a trinary merge sort           |
-    | T(n) = T(n/2) + n^2  | $\Theta(                    )$ |                                           |
-    | T(n) = 2T(n/2) + n^2 | $\Theta(                    )$ |                                           |
-    | T(n) = 3T(n/2) + n^2 | $\Theta(                    )$ |                                           |
-    | T(n) = 3T(n/2) + n   | $\Theta(                    )$ | runtime of [Karatsuba's integer multiplication algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm); HINT: Case 1 |
-    | T(n) = 7T(n/2) + n^2 | $\Theta(                    )$ | runtime of [Strassen's matrix multiplication algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm) |
+    | T(n) = T(n/2) + n    | $\Theta(n                   )$ | runtime of the bad binary search          |
+    | T(n) = T(n/2) + 1    | $\Theta(log(n)              )$ | runtime of the correct binary search      |
+    | T(n) = T(n/3) + 1    | $\Theta(log(n)              )$ | runtime of "trinary search"               |
+    | T(n) = 2T(n/2) + 1   | $\Theta(1                   )$ | runtime for [finding the median of an unsorted list](https://en.wikipedia.org/wiki/Quickselect) |
+    | T(n) = 2T(n/2) + n   | $\Theta(nlog(n)             )$ | runtime of merge sort                     |
+    | T(n) = 3T(n/3) + n   | $\Theta(nlong(n)            )$ | runtime of a trinary merge sort           |
+    | T(n) = T(n/2) + n^2  | $\Theta(n^2                 )$ |                                           |
+    | T(n) = 2T(n/2) + n^2 | $\Theta(n^2                 )$ |                                           |
+    | T(n) = 3T(n/2) + n^2 | $\Theta(n^2                 )$ |                                           |
+    | T(n) = 3T(n/2) + n   | $\Theta(n^1.58              )$ | runtime of [Karatsuba's integer multiplication algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm); HINT: Case 1 |
+    | T(n) = 7T(n/2) + n^2 | $\Theta(n^2.81              )$ | runtime of [Strassen's matrix multiplication algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm) |
 
 1. Upload your changes to github (and not gitlab) by using the following steps.
 
@@ -151,3 +151,9 @@ The purpose of this lab is to both get you familiar with using these non-github 
 ## Submission
 
 Upload the url of your github repo to sakai.
+
+for i in $(seq 0 22); 
+    do echo "i = $i"
+    python3 -m timeit\
+        -s "import search; import numpy; n = 2**$i; xs = numpy.array(range(-n, n))"\
+        "search.binary_search(xs, 5)"
